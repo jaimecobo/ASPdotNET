@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d1442a48-7c47-4b0e-9d41-538f6692eca9": {
+      "ProjectGuid": "d1442a48-7c47-4b0e-9d41-538f6692eca9",
+      "DisplayName": "EmptyWeb6.0",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}
