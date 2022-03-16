@@ -1,0 +1,16 @@
+Asp.Net Web API VS Asp.Net MVC
+Asp.Net MVC is used to create web applications that return both views and data but Asp.Net Web API is used to create full-blown HTTP services with an easy and simple way that returns only data, not view.
+
+Web API helps to build REST-ful services over the .NET Framework and it also supports content-negotiation(it's about deciding the best response format data that could be acceptable by the client. it could be JSON, XML, ATOM or other formatted data), self-hosting which are not in MVC.
+
+Web API also takes care of returning data in particular format like JSON, XML or any other based upon the Accept header in the request and you don't worry about that. MVC only return data in JSON format using JsonResult.
+
+In Web API the request is mapped to the actions based on HTTP verbs but in MVC it is mapped to actions name.
+
+Asp.Net Web API is a new framework and part of the core ASP.NET framework. The model binding, filters, routing, and other MVC features exist in Web API are different from MVC and exists in the new System.Web.Http assembly. In MVC, these features exist within.System.Web.Mvc Hence Web API can also be used with Asp.Net and as a stand-alone service layer.
+
+You can mix Web API and MVC controller in a single project to handle advanced AJAX requests which may return data in JSON, XML or any others format and building a full-blown HTTP service. Typically, this will be called Web API self-hosting.
+
+When you have mixed MVC and Web API controller and you want to implement the authorization then you have to create two filters one for MVC and another for Web API since both are different.
+
+Moreover, Web API is lightweight architecture and except the web application, it can also be used with smartphone apps.
