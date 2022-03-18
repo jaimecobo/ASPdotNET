@@ -1,0 +1,45 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: cadetblue;
+}
+
+#formRSVP {
+    background-image: url('../images/party01.jpg');
+    background-repeat: no-repeat; 
+}
+
+#DivForm{
+    text-align:center;
+}
+
+.lead {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    color:black;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
+}
+
+#paragraphThanks{
+    color: antiquewhite;
+}

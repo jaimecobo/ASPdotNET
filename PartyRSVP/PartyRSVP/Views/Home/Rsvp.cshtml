@@ -1,0 +1,66 @@
+﻿@*
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Party RSVP</title>
+</head>
+<body>
+    <div>
+    Welcome to the RSVP page!
+    </div>
+</body>
+</html>*@
+
+
+@model PartyRSVP.Models.GuestResponse
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Party RSVP</title>
+</head>
+<body>
+
+    <div id='DivForm'>
+    <div>
+    <h1 class="display-4">Welcome to the RSVP page!</h1>
+    <p class="lead">Please enter your information below</p>
+    </div>
+    <form asp-action="RsvpForm" method="post">
+        <p>
+            <label asp-for="FirstName">Your first name:</label>
+            <input asp-for="FirstName" />
+        </p>
+        <p>
+            <label asp-for="LastName">Your last name:</label>
+            <input asp-for="LastName" />
+        </p>
+        <p>
+            <label asp-for="Email">Your email:</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="Phone">Your phone:</label>
+            <input asp-for="Phone" /></p>
+        <p>
+            <label>Will you attend?</label>
+            <select asp-for="WillAttend">
+                <option value="">Choose an option</option>
+                <option value="true">Yes, I'll be there</option>
+                <option value="false">No, I can't come</option>
+            </select>
+        </p>
+        <button type="submit">Submit RSVP</button>
+    </form>
+    </div>
+
+</body>
+</html>

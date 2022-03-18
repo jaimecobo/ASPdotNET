@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1f18ed92-a8af-4629-9861-1eb6570e149d": {
+      "ProjectGuid": "1f18ed92-a8af-4629-9861-1eb6570e149d",
+      "DisplayName": "PartyRSVP",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
