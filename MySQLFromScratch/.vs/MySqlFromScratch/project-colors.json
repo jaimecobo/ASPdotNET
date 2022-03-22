@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b8b4f26d-72fa-4f25-92cd-2d904ff5d5b6": {
+      "ProjectGuid": "b8b4f26d-72fa-4f25-92cd-2d904ff5d5b6",
+      "DisplayName": "MySqlFromScratch",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
