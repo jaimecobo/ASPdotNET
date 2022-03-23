@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "11068382-9b45-4238-81dc-eac3c2d662c0": {
+      "ProjectGuid": "11068382-9b45-4238-81dc-eac3c2d662c0",
+      "DisplayName": "SQLiteMVC",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
