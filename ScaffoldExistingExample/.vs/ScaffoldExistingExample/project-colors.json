@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e45a32a1-5c60-453a-8ba2-d815c30c9588": {
+      "ProjectGuid": "e45a32a1-5c60-453a-8ba2-d815c30c9588",
+      "DisplayName": "ScaffoldExistingExample",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
