@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = 
+        IdentityFromScratchUser user = ViewBag.user;
+    List<string> myRoles ViewBag.myroles;
+}
+
+<h1>ConfigurationManager Roles for @ViewBag.user.UserNAme</h1>
+    <h2>This user is currently @myRoles.</h2>
+
+
+
+    <thead>
+    <tr>
+    <th>Role Name</th>
+    < th > Member </ th >
+    < th > Not a Member </ th >
+    </tr>
+    </thead>
+    <tbody>
+    foreach(var role in Model)
+    {
+        <tr>
+            <td>role.Name</td>
+            @{
+            if (myroles.Contains(role.Name))
+            {
+                <td> Index this Role: <a asp-Action="removerole" asp-route-role="" asp-route-user="">Remove</a> </td>
+                <td></td>
+            }
+            else
+            {
+                < td ></ td >
+                < td >Not in this role <a asp-Action="addrole" asp-route-role="@role.Id" asp-route-user="@user.Id" >Add </a> </ td >
+
+            }
+        }
+
+        </tr>
+    }
+    </tbody>

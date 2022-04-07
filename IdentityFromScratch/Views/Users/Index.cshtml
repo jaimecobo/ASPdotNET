@@ -1,0 +1,65 @@
+﻿@using IdentityFromScratch.Areas.Identity.Data
+@model IEnumerable<IdentityFromScratchUser>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Dictionary<string, IList<string>> roles = ViewBag.roles;
+    Dictionary<string, IList<Claim>> claims = ViewBag.claims;
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Roles</th>
+            <th></th>
+            <th>Claims</th>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailConfirmed)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @foreach(string role in roles[item.Id])
+                    {
+                        <text> @role <br /> </text>
+                    }
+            </td>
+            <td>
+                <a asp-action="roles" asp-route-id="@item.Id">Manage Roles</a>
+            </td>
+            <td><a asp-action="Iclaims" asp-route-id="@item.Id">Instant Claim</a></td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailConfirmed)
+            </td>
+            @*<td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
