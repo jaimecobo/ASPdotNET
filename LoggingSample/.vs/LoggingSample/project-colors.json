@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "21cc039f-2a69-40b1-842b-100900c3656e": {
+      "ProjectGuid": "21cc039f-2a69-40b1-842b-100900c3656e",
+      "DisplayName": "LoggingSample",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
