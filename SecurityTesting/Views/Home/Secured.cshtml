@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+<h1>This is the secured page. You should not be able to access this if security is working</h1>
+
+User: @User 
+<br />
+@*User.Identity: @User.Identity*@ 
+User.Identity: @User?.Identity?.ToString()??"NULL"
+<br />
+@*User.Identity.Name: @User.Identity?.Name*@ 
+User.Identity.Name: @User?.Identity?.Name??"NULL"
+<br />
+@*User.Identity.IsAutehenticated: @User.Identity?.IsAuthenticated *@
+User.Identity.IsAutehenticated: @User?.Identity?.IsAuthenticated.ToString()??"NULL" 
+<br />
+@*User.Identity.AuthenticationType: @User.Identity?.AuthenticationType*@ 
+User.Identity.AuthenticationType: @User.Identity.AuthenticationType??"NULL"
+<br />
+
+
+<hr />
+Cookies.Count: @Context.Request.Cookies.Count 
+<br />
+
+<hr />
+
+@foreach (var c in Context.Request.Cookies){
+    <p>Cookie: @c </p>
+}
+
+<hr />
+
+Claims.Count: @User.Claims.Count();
+
+<hr />
+
+@foreach (var c in User.Claims){
+    <p>Claims: @c </p>
+}
+
+<hr />
+
+<a href="\Home\">Click here to access the Home page</a>
+<br />
+<a href="\Home\login">Click here to login</a>
+<br /> 
+<a href="\Home\logout">Click here to log off</a>

@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>This is Home Page</h1>
+User: @User <br />
+User.Identity: @User.Identity <br />
+User.Identity.Name: @User.Identity?.Name <br />
+User.Identity.IsAutehenticated: @User.Identity?.IsAuthenticated <br />
+User.Identity.AuthenticationType: @User.Identity?.AuthenticationType <br />
+
+
+<hr />
+Cookies.Count: @Context.Request.Cookies.Count <br />
+<hr />
+@foreach (var c in Context.Request.Cookies){
+    <p>Cookie: @c </p>
+}
+
+<hr />
+Claims.Count: @User.Claims.Count();
+<hr />
+@foreach (var c in User.Claims){
+    <p>Claim: @c </p>
+}
+<hr />
+
+@*@if(Context.User.IsInRole("Admin"))*@
+@if (Context.User.Identity.Name == "Jaime")
+{
+    <a href="\Home\secured">Click here to access the secured page</a>
+}
+<br />
+<a href="\Home\loginJaime">Click here to login as Jaime</a>
+<br /> 
+<a href="\Home\loginJose">Click here to login as Jose</a>
+<br /> 
+<a href="\Home\logout">Click here to log off</a>
