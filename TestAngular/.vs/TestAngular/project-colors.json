@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "213c12e5-f930-490c-81a0-edb2900643b4": {
+      "ProjectGuid": "213c12e5-f930-490c-81a0-edb2900643b4",
+      "DisplayName": "TestAngular",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
