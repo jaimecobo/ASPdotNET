@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L08HandsOnASPNetDB02", "L08HandsOnASPNetDB02.csproj", "{557C3B98-ADE3-4DEC-8CF8-B151829AC09C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{557C3B98-ADE3-4DEC-8CF8-B151829AC09C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557C3B98-ADE3-4DEC-8CF8-B151829AC09C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557C3B98-ADE3-4DEC-8CF8-B151829AC09C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557C3B98-ADE3-4DEC-8CF8-B151829AC09C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DCDD9F8-95AE-40A1-813B-61470544ED04}
+	EndGlobalSection
+EndGlobal
