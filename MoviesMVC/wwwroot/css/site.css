@@ -1,0 +1,70 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    background-color:cadetblue;
+  margin-bottom: 60px;
+}
+
+#MoviesIndexTitle {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 42px;
+}
+
+#MovieListedTitle {
+    font-family: 'Luckiest Guy', cursive;
+    font-size:large;
+}
+
+.MovieImg {
+    width: 150px;
+    height: 225px;
+}
+
+.MovieURL{
+    width: 400px;
+    height: 225px;
+}
+
+.tableHeaderTitle {
+    color: aliceblue;
+    text-align: left;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 32px;
+}
+
+.tableHeaderPoster {
+    color: aliceblue;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: left;
+    font-size: 32px;
+}
+
+.tableHeaderTrailer {
+    color: aliceblue;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 32px;
+}
+
+.ActEDD {
+    font-family: 'Luckiest Guy', cursive;
+    text-align: right;
+}
+
+.watchedMoviesContent {
+    font-family: 'Fredoka', sans-serif;
+    font-size: large;
+}
