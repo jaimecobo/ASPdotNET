@@ -1,0 +1,77 @@
+﻿@model IEnumerable<L08HandsOnASPNetDB.Models.Movie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+<h1 id="MoviesIndexTitle">MOVIES</h1>
+
+
+@if (User.Identity.IsAuthenticated && User.Identity.Name == "admin@cobo.live")
+{
+    <p class="ActEDD">
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+
+@*@if (User.Identity.IsAuthenticated)
+{
+    <p class="ActEDD">
+        <a asp-action="Create">Create New</a>
+    </p>
+}*@
+<table class="table">
+    <thead>
+        <tr>
+            <th class="tableHeaderTitle">
+                @*@Html.DisplayNameFor(model => model.MovieTitle)*@
+                Title
+            </th>
+            <th class="tableHeaderPoster">
+                @*@Html.DisplayNameFor(model => model.MovieImage)*@
+                Poster
+            </th>
+            <th class="tableHeaderTrailer">
+                @*@Html.DisplayNameFor(model => model.MovieURL)*@
+                Trailer
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr> 
+            <td id="MovieListedTitle">
+                @Html.DisplayFor(modelItem => item.MovieTitle)
+            </td>
+            <td>
+                <img class="MovieImg" src="@Html.DisplayFor(modelItem => item.MovieImage)" />
+            </td>
+            <td>
+                <div class="d-flex flex-row flex-wrap justify-content-center">
+                    <div class="d-flex embed-responsive embed-responsive-16by9">
+                        <iframe class="frameStyle MovieURL" src="@Html.DisplayFor(modelItem => item.MovieURL)" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+                
+            </td>
+
+            @if (User.Identity.IsAuthenticated && User.Identity.Name == "admin@cobo.live")
+                {
+                    <td class="ActEDD">
+                        <a asp-action="Edit" asp-route-id="@item.MovieId">Edit</a> <br /> <br />
+                        <a asp-action="Details" asp-route-id="@item.MovieId">Details</a> <br /> <br />
+                        <a asp-action="Delete" asp-route-id="@item.MovieId">Delete</a>
+                        @*<a asp-action="Edit" asp-route-id="@item.MovieId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.MovieId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.MovieId">Delete</a>*@
+                   </td> 
+                }
+        </tr>
+}
+    </tbody>
+</table>

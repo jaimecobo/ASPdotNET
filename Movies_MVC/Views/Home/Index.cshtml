@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the newest movie streaming platform</h1>
+        <h3>-- Click on <a  asp-area="" asp-controller="Movies" asp-action="Index">Movies</a> to see our catalog --</h3>
+    @*<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+
+    <br />
+
+    <a  asp-area="" asp-controller="Movies" asp-action="Index">
+        <button class="btn btn-info">
+            Movies
+        </button>
+    </a>
+
+    <br />
+    <br />
+
+    
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a  asp-area="" asp-controller="WatchedMovies" asp-action="Index">
+            <button class="btn btn-info">
+                Watched
+            </button>
+        </a>
+    }
+    
+
+</div>
+

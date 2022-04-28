@@ -1,0 +1,67 @@
+﻿@using L08HandsOnASPNetDB.Models;
+@model IEnumerable<L08HandsOnASPNetDB.Models.WatchedMovie>
+
+ 
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet">
+
+<h1 id="MoviesIndexTitle">WATCHED MOVIES</h1>
+
+@if (User.Identity.IsAuthenticated && User.Identity.Name == "admin@cobo.live")
+{
+    <p class="ActEDD">
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="tableHeaderTitle">
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th class="tableHeaderTitle">
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th class="tableHeaderTitle">
+                @Html.DisplayNameFor(model => model.Movie)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="watchedMoviesContent">
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td class="watchedMoviesContent">
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td class="watchedMoviesContent">
+                @Html.DisplayFor(modelItem => item.Movie.MovieTitle )
+            </td>
+            @if (User.Identity.IsAuthenticated && User.Identity.Name == "admin@cobo.live")
+                {
+                    <td class="ActEDD">
+                        <a asp-action="Edit" asp-route-id="@item.WatchedMovieId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.WatchedMovieId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.WatchedMovieId">Delete</a>
+                   </td> 
+                }
+            @*<td>
+                <a asp-action="Edit" asp-route-id="@item.WatchedMovieId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.WatchedMovieId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.WatchedMovieId">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
