@@ -1,0 +1,42 @@
+﻿@model BlogMVC.Models.Blog
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="blogTitles">Details</h1>
+
+<div>
+    <h4 class="blogTitles">Blog</h4>
+    <hr />
+    <dl class="row blogContent">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BlogTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BlogTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BlogContent)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BlogContent)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StampTime)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StampTime)
+        </dd>
+    </dl>
+</div>
+<div class="blogContent">
+    <a asp-action="Edit" asp-route-id="@Model?.BlogId">Edit</a> |
+    <a asp-action="Index">Back to Blog</a>
+</div>
