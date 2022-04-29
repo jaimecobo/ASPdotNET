@@ -1,0 +1,72 @@
+﻿@model IEnumerable<BlogMVC.Models.Blog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+
+<h1 class="blogTitles">Ultimate Blog</h1>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p class="blogTitles">
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @*@Html.DisplayNameFor(model => model.UserId)*@
+                Blogger
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.BlogTitle)*@
+                Title
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.BlogContent)*@
+                Content
+            </th>
+            <th>
+                @*@Html.DisplayNameFor(model => model.StampTime)*@
+                Posted on
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="blogContent">
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StampTime)
+            </td>
+
+            @*@if (User.Identity.IsAuthenticated && User.Identity.Equals(User.Identity?.Name))*@
+            @if (User.Identity.IsAuthenticated && item.UserId == User.Identity.Name)
+            
+            {
+                 <td>
+                    <a asp-action="Edit" asp-route-id="@item.BlogId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.BlogId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.BlogId">Delete</a>
+                </td>
+            }
+        </tr>
+}
+    </tbody>
+</table>
